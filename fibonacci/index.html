@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci WASM x JavaScript</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Fibonacci WASM x JavaScript</h1>
+    <form action="" method="get">
+        <input type="text" id="entrada" value="10">
+        <input type="submit" value="Calcular" id="calcular">
+    </form>
+    <table>
+        <caption>Comparativo</caption>
+        <thead>
+            <tr>
+                <td>Tecnologia</td>
+                <td>Arquivo</td>
+                <td>Entrada</td>
+                <td>Saída</td>
+                <td>Tempo inical</td>
+                <td>Tempo final</td>
+                <td>Duração</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>WebAssembly</td>
+                <td><code>./WASM/fibonacci.wasm</code></td>
+                <td id="entrada-wasm">Entrada</td>
+                <td id="saida-wasm">Saída</td>
+                <td id="inical-wasm">00:00:00</td>
+                <td id="final-wasm">00:00:00</td>
+                <td id="duracao-wasm">00:00:00</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td><code>./js/fibonacci.js</code></td>
+                <td id="entrada-JS">Entrada</td>
+                <td id="saida-JS">Saída</td>
+                <td id="inical-JS">00:00:00</td>
+                <td id="final-JS">00:00:00</td>
+                <td id="duracao-JS">00:00:00</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script type="module" src="test/test-desempenho.js"></script>
+</body>
+</html>
